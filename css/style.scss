@@ -355,6 +355,16 @@
 }
 
 @media  only screen and (max-width:768px){
+    .header{
+    .banner{
+        h1{
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 1.1rem;
+        }
+    }
+}
     .explore{
         .title{
             p{
@@ -395,6 +405,38 @@
         }
     }
 }
+
+@media  only screen and (max-width:468px){
+    .header{
+        .navbar{
+            a{
+                display: none;
+            }
+            .fSearch{
+                display: block;
+            }
+        }
+        .banner{
+            h1{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+    .contact{
+        .footer{
+            span{
+                display: none;
+            }
+            a{
+                display: none;
+            }
+        }
+    }
+}
+
 .watch__ani{
 	-webkit-animation: scale-in-ver-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: scale-in-ver-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
