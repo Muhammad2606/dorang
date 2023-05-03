@@ -5,6 +5,7 @@ const search = document.querySelector('.fa-search'),
       watch = document.querySelector('.watch'),
       inputSearch = document.querySelector('.add__search'),
       header = document.querySelector('.header'),
+      loader = document.querySelector('.svg-frame'),
       navigation = document.querySelector('.navigation');
      
     
@@ -46,18 +47,23 @@ const search = document.querySelector('.fa-search'),
     //   byScroll();
     //   window.addEventListener('scroll', byScroll);
 
-      function byScroll (){
+    function byScroll (){
+        
         if(window.pageYOffset == 0){
             navigation.classList.remove('add__navigation__color');
+            console.log('delete');
         }
         else{
             navigation.classList.add('add__navigation__color');
+            console.log('add');
 
         }
-        
-      }
- byScroll();
- window.addEventListener('scroll', byScroll);
+    }
+    byScroll();
+    window.addEventListener('scroll', byScroll);
       
- 
+    setTimeout(() => {
+        loader.classList.add('hide');
+    }, 1500);
+
 });

@@ -431,7 +431,7 @@
                 display: none;
             }
             a{
-                display: none;
+                display: none ;
             }
         }
     }
@@ -465,6 +465,72 @@
       opacity: 1;
     }
   }
+
+// loader
+.svg-frame {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181718;
+    z-index: 99999;
+  }
+  
+  .svg-frame svg {
+    position: absolute;
+    transition: 0.2s;
+    z-index: calc(1 - (0.2 * var(--j)));
+    transform-origin: center;
+    width: 344px;
+    height: 344px;
+    fill: none;
+  }
+  
+//   .svg-frame:hover svg {
+//     transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
+//   }
+  
+  .svg-frame svg #center {
+    transition: .5s;
+    transform-origin: center;
+  }
+  
+//   .svg-frame:hover svg #center {
+//     transform: rotate(-30deg) translateX(45px) translateY(-3px);
+//   }
+  
+  #out2 {
+    animation: rotate16 3s ease-in-out infinite alternate;
+    transform-origin: center;
+  }
+  
+  #out3 {
+    animation: rotate16 2s ease-in-out infinite alternate;
+    transform-origin: center;
+    stroke: #ff0;
+  }
+  
+  #inner3,
+  #inner1 {
+    animation: rotate16 3s ease-in-out infinite alternate;
+    transform-origin: center;
+  }
+  
+  #center1 {
+    fill: #ff0;
+    animation: rotate16 2s ease-in-out infinite alternate;
+    transform-origin: center;
+  }
+  
+  @keyframes rotate16 {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
 .show{
     display: block;
 }
