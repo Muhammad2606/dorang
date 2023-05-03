@@ -402,6 +402,10 @@ img {
   .header .navbar .fSearch {
     display: block;
   }
+  .header .navbar img {
+    width: 15%;
+    height: 10vh;
+  }
   .header .banner h1 {
     font-size: 1.5rem;
   }
